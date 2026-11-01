@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+*.log
+*.local.json
+mobile-link-devices.json
+.mobile-link/

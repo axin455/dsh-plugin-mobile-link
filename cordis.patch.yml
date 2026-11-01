@@ -1,0 +1,13 @@
+# dsh-plugin-mobile-link bundle patch.
+# Inserts the dedicated mobile gateway row into the host plane. It consumes the
+# DSH web server, the Host Remote Gateway and the Connection service, and owns
+# its own authenticated WebSocket listener for the mobile app.
+- insert:
+    - id: mobile-link
+      name: 'dsh-plugin-mobile-link'
+      config:
+        # LAN listener used by the phone/tablet. DSH WebUI stays loopback-only.
+        lanHost: 0.0.0.0
+        lanPort: 3090
+        # Shown in the pairing payload; defaults to the computer hostname.
+        # gatewayName: My PC
